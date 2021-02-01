@@ -36,13 +36,22 @@
   <head>
     <meta charset="utf-8">
     <title>Domande frequenti – Privacy e termini – Google</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <!-- Navbar -->
     <nav>
-      <div class="navabar-top">
+      <div class="navbar-top">
+        <div class="left d-flex">
+          <a href="#">
+            <img src="google-logo.png" alt="" id="logo">
+          </a>
 
+          <h1>Privacy e termini</h1>
+
+        </div>
       </div>
     </nav>
     <!-- End Navbar -->
