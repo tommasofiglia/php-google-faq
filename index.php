@@ -49,7 +49,26 @@
       'title' => 'Domande frequenti',
       'link' => ''
     ]
-  ]
+  ];
+
+  $footer_links = [
+    [
+      'title' => 'Google',
+      'link' => ''
+    ],
+    [
+      'title' => 'Tutto su Google',
+      'link' => ''
+    ],
+    [
+      'title' => 'Privacy',
+      'link' => ''
+    ],
+    [
+      'title' => 'Termini',
+      'link' => ''
+    ]
+  ];
 
 ?>
 
@@ -116,7 +135,28 @@
 
     <!-- Footer -->
     <footer>
-      <div class="container">
+      <div class="container d-flex">
+
+        <div class="left d-flex">
+
+          <?php foreach ($footer_links as $link): ?>
+            <a href="#"> <?php echo $link['title'] ?></a>
+          <?php endforeach; ?>
+
+        </div>
+
+        <div class="right d-flex">
+          <img src="footer-img.jpg" alt="">
+          <form action="">
+          <select id="languages" name="languages">
+            <option value="italian">Italiano</option>
+            <option value="english">English</option>
+            <option value="francais">Français</option>
+            <option value="deutsche">Deutsche</option>
+            <option value="espanol">Español</option>
+          </select>
+        </form>
+        </div>
 
       </div>
     </footer>
