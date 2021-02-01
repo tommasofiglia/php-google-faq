@@ -28,6 +28,28 @@
       'text' => ["In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli <a href='#'>URL referrer</a>. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili <a href='#'>qui</a>. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio."]
     ]
   ];
+  $navbar_links = [
+    [
+      'title' => 'Introduzione',
+      'link' => ''
+    ],
+    [
+      'title' => 'Norme sulla privacy',
+      'link' => ''
+    ],
+    [
+      'title' => 'Termini di servizio',
+      'link' => ''
+    ],
+    [
+      'title' => 'Tecnologie',
+      'link' => ''
+    ],
+    [
+      'title' => 'Domande frequenti',
+      'link' => ''
+    ]
+  ]
 
 ?>
 
@@ -43,15 +65,38 @@
   <body>
     <!-- Navbar -->
     <nav>
+      <!-- Parte top della navbar -->
       <div class="navbar-top">
         <div class="left d-flex">
+
           <a href="#">
             <img src="google-logo.png" alt="" id="logo">
           </a>
 
           <h1>Privacy e termini</h1>
+        </div>
+
+        <div class="right d-flex">
+
+          <a href="#">
+            <img src="dot-icon.png" alt="">
+          </a>
+          <a href="#" class="white">
+            <span>T</span>
+          </a>
 
         </div>
+      </div>
+
+      <!-- Parte bottom della navbar -->
+      <div class="navbar-bottom">
+        <?php foreach ($navbar_links as $link): ?>
+          <a href="#" class="link">
+            <?php echo $link['title']; ?>
+          </a>
+
+        <?php endforeach; ?>
+
       </div>
     </nav>
     <!-- End Navbar -->
@@ -71,7 +116,9 @@
 
     <!-- Footer -->
     <footer>
+      <div class="container">
 
+      </div>
     </footer>
     <!-- End footer -->
 
